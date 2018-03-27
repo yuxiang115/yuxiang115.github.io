@@ -43,6 +43,8 @@
     
     <title>
         
+            Functional Language | 
+        
         Xiang&#39; Blog
     </title>
 
@@ -52,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Theory">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -208,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Xiang&#39; Blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about.html">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/26/Functional-Language/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Xiang&#39; Blog">
@@ -223,13 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about.html">
+    <meta property="og:url" content="http://yoursite.com/2018/03/26/Functional-Language/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Xiang&#39; Blog">
+    <meta property="og:title" content="Functional Language | Xiang&#39; Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Theory"> 
 
+    
+        <meta property="article:published_time" content="Mon Mar 26 2018 23:09:35 GMT-0500">
+        <meta property="article:modified_time" content="Mon Mar 26 2018 23:55:07 GMT-0500">
     
 
     <!-- The Twitter Card protocol -->
@@ -237,13 +242,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/26/Functional-Language/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/26/Functional-Language/index.html",
+    "headline": "Functional Language",
+    "datePublished": "Mon Mar 26 2018 23:09:35 GMT-0500",
+    "dateModified": "Mon Mar 26 2018 23:55:07 GMT-0500",
+    "author": {
+        "@type": "Person",
+        "name": "Xiang Yu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xiang&#39; Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Theory",
+    "description": "",
+}
+</script>
 
 
     
@@ -279,6 +314,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#What-is-advantage-of-functional-laugnage-comparing-to-imperative-language-like-java-or-c"><span class="post-toc-number">1.</span> <span class="post-toc-text">What is advantage of functional laugnage comparing to imperative language like java or c++</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -305,7 +373,7 @@
         
     
             <p class="article-headline-p">
-                
+                Functional Language
             </p>
         </div>
 
@@ -324,7 +392,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Xiang Yu</strong>
-        <span>Mar 10, 2018</span>
+        <span>Mar 26, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -342,6 +410,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Theory/">Theory</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -356,7 +433,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/about.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Functional Language&url=http://yoursite.com/2018/03/26/Functional-Language/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -365,7 +442,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=http://yoursite.com/about.html&via=Xiang Yu" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Functional Language&url=http://yoursite.com/2018/03/26/Functional-Language/index.html&via=Xiang Yu" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -374,7 +451,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/about.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/26/Functional-Language/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -383,7 +460,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/about.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/26/Functional-Language/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -392,7 +469,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/about.html&title=" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/03/26/Functional-Language/index.html&title=Functional Language" target="_blank">
             <li class="mdl-menu__item">
                 Share to LinkedIn
             </li>
@@ -401,7 +478,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Xiang&#39; Blog&title=&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/about.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Xiang&#39; Blog&title=Functional Language&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/26/Functional-Language/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -420,7 +497,37 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Xiang Yu<br>I am a cool guy!!</p>
+        <p>#Imperative Language:<br> the language uses a sequence of statements to determine how to reach a certain goal. These are said to change the state of the program as each one is executed in turn.</p>
+<p><strong>Example</strong>: Java is <strong>Imperative Language</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> total = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> n1 = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> n2 = <span class="number">2</span>;</span><br><span class="line">total = n1 + n2;</span><br></pre></td></tr></table></figure>
+<p>#Functional Languages:<br>The functional programming paradigm was explicitly created to support a pure functional approach to problem solving. Functional programming is a form of declarative programming.</p>
+<p><strong>Functional Languages provide features missing in imperative languages:</strong></p>
+<ul>
+<li><p>First-class function values and higher-order functions</p>
+<ul>
+<li><p><strong>First-class functions</strong> if it treats functions as first-class citizens. This means the language supports passing functions as arguments to other functions, returning them as the values from other functions, and assigning them to variables or storing them in data structures.</p>
+<ul>
+<li><p>Example: max(1 3) =&gt; (max 1 3) in Schame</p>
+<p><code>schame
+((lambda (x) (* x x)) )</code>pass funtion as parameter and return the fucntion, which is unnamed function</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extensive polymorphism  <ul>
+<li>Allows a function to be used on as general a class of arguments as possible</li>
+<li>List type and operators<ul>
+<li>they have a natural recursive deﬁnition, and are easily manipulated by operating on their ﬁrst element and (recursively) the remainder of the list</li>
+</ul>
+</li>
+<li>Structured function returns</li>
+<li>Constructor (aggregates) for structured objects</li>
+<li>Garbage collection</li>
+</ul>
+</li>
+</ul>
+<h2 id="What-is-advantage-of-functional-laugnage-comparing-to-imperative-language-like-java-or-c"><a href="#What-is-advantage-of-functional-laugnage-comparing-to-imperative-language-like-java-or-c" class="headerlink" title="What is advantage of functional laugnage comparing to imperative language like java or c++"></a>What is advantage of functional laugnage comparing to imperative language like java or c++</h2><p>funtional language like schame can pass funtions as parameter, return those function and it doesn’t need assignment to variable, which makes it better understand of its semantics.</p>
 
         
     
@@ -446,6 +553,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/03/03/Test-Tile/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -622,6 +737,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
