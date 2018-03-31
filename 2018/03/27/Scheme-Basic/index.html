@@ -234,7 +234,7 @@
 
     
         <meta property="article:published_time" content="Tue Mar 27 2018 00:09:53 GMT-0500">
-        <meta property="article:modified_time" content="Tue Mar 27 2018 02:18:05 GMT-0500">
+        <meta property="article:modified_time" content="Sat Mar 31 2018 10:03:23 GMT-0500">
     
 
     <!-- The Twitter Card protocol -->
@@ -257,7 +257,7 @@
     "mainEntityOfPage": "http://xiangfish.com/2018/03/27/Scheme-Basic/index.html",
     "headline": "Scheme Basic",
     "datePublished": "Tue Mar 27 2018 00:09:53 GMT-0500",
-    "dateModified": "Tue Mar 27 2018 02:18:05 GMT-0500",
+    "dateModified": "Sat Mar 31 2018 10:03:23 GMT-0500",
     "author": {
         "@type": "Person",
         "name": "Xiang Yu",
@@ -502,10 +502,10 @@
 <h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples:"></a>Examples:</h1><p> <code>(car &#39;(+ 4 5))</code>  =&gt; ‘3<br> <code>(cdr &#39;(+ 4 5))</code>  =&gt;  ‘(4 5)<br> <code>(cadr &#39;(3 4 5 6 taxes))</code> =&gt; 4<br> <code>(caddr &#39;(3 4 5 6 taxes))</code> =&gt; 5</p>
 <p> <img src="/2018/03/27/Scheme-Basic/syntax_tree.png" alt="Syntax Tree of function `caddr`"></p>
 <p> <code>(lamdda (x) (x * x) 6)</code> =&gt; 36<br> function 6 square, pass parameter x = 6 into function<br> <code>(define square (lamdda (x) (x * x)))</code> give this function name ‘square’<br> <code>(square 5)</code> =&gt; 25</p>
-<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples:"></a>More examples:</h2><p><code>(car (car &#39;( (3) 4 (5) )))</code> =&gt; 3<br><strong>comment:</strong> first run function <code>(car &#39;( (3) 4 (5) )</code> we will get list ‘(3) and then run function <code>(car &#39;(3) )</code> retunr the the first element of list (3) which is 3</p>
+<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples:"></a>More examples:</h2><p><code>(car (car &#39;( (3) 4 (5) )))</code> =&gt; 3<br><strong>comment:</strong> first run function <code>(car &#39;( (3) 4 (5) )</code> we will get list ‘(3) and then run function <code>(car &#39;(3) )</code> return the the first element of list (3) which is 3</p>
 <p><code>(car (car &#39;(3 4 (5)) ))</code> =&gt; <strong>error</strong><br><strong>comment:</strong> first run function <code>(car &#39;(3 4 (5)) )</code> return 3 which is the single fisrt elements of the list. secondly run <code>(car 3)</code> will be error, the reason is that the function is used on list instead of a element</p>
-<p><code>(car (car &#39;((taxes mission) 3 4)))</code> =&gt; ‘taxes<br><strong>comment:</strong> first run function <code>(car &#39;((taxes mission) 3 4)</code> retunrns <code>(taxes mission)</code> the first elements of the list is the other list, secondly run <code>(car &#39;(taxes mission))</code> which return taxes</p>
-<p><code>(cdr (car &#39;((texas mission) 3 4)))</code> =&gt; <code>&#39;(mission)</code><br><strong>comment:</strong> first run function <code>(car &#39;((taxes mission) 3 4)</code> retunrns <code>(taxes mission)</code> the first elements of the list is the other list, secondly run <code>(cdr &#39;(taxes mission))</code> which return <code>&#39;(mission)</code>. <code>cdr</code> is the function that get the rest of list without the head.</p>
+<p><code>(car (car &#39;((taxes mission) 3 4)))</code> =&gt; ‘taxes<br><strong>comment:</strong> first run function <code>(car &#39;((taxes mission) 3 4)</code> returns <code>(taxes mission)</code> the first elements of the list is the other list, secondly run <code>(car &#39;(taxes mission))</code> which return taxes</p>
+<p><code>(cdr (car &#39;((texas mission) 3 4)))</code> =&gt; <code>&#39;(mission)</code><br><strong>comment:</strong> first run function <code>(car &#39;((taxes mission) 3 4)</code> returns <code>(taxes mission)</code> the first elements of the list is the other list, secondly run <code>(cdr &#39;(taxes mission))</code> which return <code>&#39;(mission)</code>. <code>cdr</code> is the function that get the rest of list without the head.</p>
 <p><code>((lambda (x) x) car)</code> =&gt; return the function of <code>car</code><br><strong>more</strong>: <code>((lambda (x) x) car) &#39;(taxes oklahoma)</code> =&gt; ‘texas<br>this function same as <code>(car &#39;(taxes oklahoma))</code> pass parameter car into function <code>(lambda (x) x)</code>, and return a new function.</p>
 <p><code>((lambda (x) x) (* 3 5) (* x x) 6)</code> =&gt; 36<br><code>((lambda (x) x) (* x x) 6) (* 3 5)</code> =&gt; 15<br><strong>comment:</strong> in lambda function, it runs every staments in lambda but only output the last one.</p>
 <p>##Note:<br><code>()</code> is used to indicate list.<br>Put the <code>quote</code> in front of list is used to tell scheme not to evaluate the function in <code>()</code><br><strong>Example:</strong><br><code>&#39;(+ 3 5)</code> =&gt; (+ 3 5)</p>
