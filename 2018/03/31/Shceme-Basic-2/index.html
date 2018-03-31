@@ -43,7 +43,7 @@
     
     <title>
         
-            Archives | 
+            Scheme Basic 2 | 
         
         Xiang&#39; Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Scheme">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Xiang&#39; Blog">
-    <meta name="msapplication-starturl" content="http://xiangfish.com/archives/">
+    <meta name="msapplication-starturl" content="http://xiangfish.com/2018/03/31/Shceme-Basic-2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Xiang&#39; Blog">
@@ -225,13 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://xiangfish.com/archives/">
+    <meta property="og:url" content="http://xiangfish.com/2018/03/31/Shceme-Basic-2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives | Xiang&#39; Blog">
+    <meta property="og:title" content="Scheme Basic 2 | Xiang&#39; Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Scheme"> 
 
+    
+        <meta property="article:published_time" content="Sat Mar 31 2018 09:45:28 GMT-0500">
+        <meta property="article:modified_time" content="Sat Mar 31 2018 13:11:18 GMT-0500">
     
 
     <!-- The Twitter Card protocol -->
@@ -239,13 +242,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://xiangfish.com/archives/index.html" />
+        <link rel="canonical" href="http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html",
+    "headline": "Scheme Basic 2",
+    "datePublished": "Sat Mar 31 2018 09:45:28 GMT-0500",
+    "dateModified": "Sat Mar 31 2018 13:11:18 GMT-0500",
+    "author": {
+        "@type": "Person",
+        "name": "Xiang Yu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xiang&#39; Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Scheme",
+    "description": "",
+}
+</script>
 
 
     
@@ -279,338 +312,279 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Heading-Note"><span class="post-toc-number">1.</span> <span class="post-toc-text">Heading Note:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Scheme-functions"><span class="post-toc-number">2.</span> <span class="post-toc-text">Scheme functions:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Bindings"><span class="post-toc-number">3.</span> <span class="post-toc-text">Bindings</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Bindings-Examples"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Bindings Examples:</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Examples-for-functions"><span class="post-toc-number">4.</span> <span class="post-toc-text">Examples for functions</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Note"><span class="post-toc-number">5.</span> <span class="post-toc-text">Note:</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/31/Shceme-Basic-2/">Scheme Basic 2</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/31/Shceme-Basic-2/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Xiang Yu's avatar">
-            </div>
-            <div>
-                <strong>Xiang Yu</strong>
-                <span>Mar 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/programming-language-pragmatics/">programming language pragmatics</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/27/Scheme-Basic/">Scheme Basic</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/27/Scheme-Basic/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Xiang Yu's avatar">
-            </div>
-            <div>
-                <strong>Xiang Yu</strong>
-                <span>Mar 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/programming-language-pragmatics/">programming language pragmatics</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/26/Functional-Language/">Functional Language Introduction</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/26/Functional-Language/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Xiang Yu's avatar">
-            </div>
-            <div>
-                <strong>Xiang Yu</strong>
-                <span>Mar 26, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/programming-language-pragmatics/">programming language pragmatics</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/03/Test-Tile/">IOU Tile</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Tracy Yue, i Love you
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/03/Test-Tile/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Xiang Yu's avatar">
-            </div>
-            <div>
-                <strong>Xiang Yu</strong>
-                <span>Mar 03, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily/">Daily</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/03/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/03/hello-world/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Xiang Yu's avatar">
-            </div>
-            <div>
-                <strong>Xiang Yu</strong>
-                <span>Mar 03, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Scheme Basic 2
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Xiang Yu</strong>
+        <span>Mar 31, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Scheme/">Scheme</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Scheme Basic 2&url=http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html&pic=http://xiangfish.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Scheme Basic 2&url=http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html&via=Xiang Yu" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html&title=Scheme Basic 2" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Xiang&#39; Blog&title=Scheme Basic 2&summary=&pics=http://xiangfish.com/img/favicon.png&url=http://xiangfish.com/2018/03/31/Shceme-Basic-2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Heading-Note"><a href="#Heading-Note" class="headerlink" title="Heading Note:"></a>Heading Note:</h1><p><strong>Infix:</strong> Expression in Math. (3 + 4);<br><strong>Prefix:</strong> Scheme is prefix language (+ 3 4)</p>
+<p><strong>Advantage of prefix over infix:</strong><br>Prefix is easy for machine to parse, and there is no any confusing question for machine to know operator precedence. More precise.</p>
+<h1 id="Scheme-functions"><a href="#Scheme-functions" class="headerlink" title="Scheme functions:"></a>Scheme functions:</h1><p><code>(if (&gt; a 0) (+ 2 3) (+ 2 &quot;foo&quot;))</code>: if checks <code>(a &gt; 0)</code> true or false, if <code>(a &gt; 0)</code> returns #t, it is true and run the expression <code>(+ 2 3)</code>, if it returns #f, it is false and run expression `(+ 2  “foo”) which will produce a run-time type clash error.</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">cond</span></span> </span><br><span class="line">    ((<span class="name"><span class="builtin-name">&lt;</span></span> <span class="number">3</span> <span class="number">2</span>) <span class="number">1</span>) </span><br><span class="line">    ((<span class="name"><span class="builtin-name">&lt;</span></span> <span class="number">4</span> <span class="number">3</span>) <span class="number">2</span>) </span><br><span class="line">    (<span class="name"><span class="builtin-name">else</span></span> <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p>This Function’s result is 3. COND same as <strong>if…else if…else:</strong></p>
+<p><code>(boolean? x)</code> to check if x is a Boolean.</p>
+<p><code>(char? x)</code> to check if x is a character? </p>
+<p><code>(string? x)</code> to check if x is a string? </p>
+<p><code>(symbol? x)</code> to check if x is a symbol? </p>
+<p><code>(number? x)</code> to check if x is a number? </p>
+<p><code>(pair? x)</code> to check if x is a (not necessarily proper) pair?</p>
+<p><code>(list? x)</code> ; to check if x is a (proper) list?</p>
+<p><code>(apply )</code>: apply a expression function to a list. It has two parameters that the first is function and the second one is list.</p>
+<p><code>(eval)</code> is used to evaluate a list that has been created as data structure.</p>
+<p><code>(map )</code> calls its function on for each elements on the the list, or corresponding sets of elements from the lists.</p>
+<h1 id="Bindings"><a href="#Bindings" class="headerlink" title="Bindings"></a>Bindings</h1><p>Names can be bound to values by the function <code>(let )</code> It takes two or more arguments. The first one is the list that contains pairs. In each pairs, the first element is the name and the second element is value of that name. This is similar to declaration in c++ or java.</p>
+<h2 id="Bindings-Examples"><a href="#Bindings-Examples" class="headerlink" title="Bindings Examples:"></a>Bindings Examples:</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">let</span></span> ((<span class="name">a</span> <span class="number">3</span>))</span><br><span class="line">    (<span class="name"><span class="builtin-name">let</span></span> ((<span class="name">a</span> <span class="number">4</span>) </span><br><span class="line">          (<span class="name">b</span> a)</span><br><span class="line">         ) </span><br><span class="line">        (<span class="name"><span class="builtin-name">+</span></span> a b)</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><strong>Comment:</strong> This code will return <strong>7</strong>.<br>The first argument in first <code>let</code> is a list of declaration, which make <code>a = 3;</code> and the second argument in second <code>let</code> is a list of declaration that <code>a = 4;</code> and <code>b = a</code>;</p>
+<p>In the second <code>let</code>, <code>(a 4)</code> which makes a new <code>a</code> variable and signed 4 to it. This is inter <code>a</code> which is different from outer <code>a</code> which is in the first argument in the first <code>let</code>. And <code>(b a)</code> in the second <code>let</code> assign the outer <code>a</code>‘s value to <code>b</code> whose value is 4. Because the argument<code>(+ a b)</code> is in the second <code>let</code>, <code>a</code> is the inter <code>a</code> in the second <code>let</code>. Therefore, the <code>(+ a b)</code> is <code>(+ 4 3)</code> =&gt; 7.</p>
+<ul>
+<li><code>(let ((x 3)) (+ x 3))</code> =&gt; 6</li>
+<li><code>(let ((x 3) (y 6)) (+ x y))</code> =&gt; 9</li>
+</ul>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">let</span></span> ((<span class="name">x</span> <span class="number">5</span>))</span><br><span class="line">   (<span class="name"><span class="builtin-name">let</span></span> ((<span class="name">x</span> <span class="number">4</span>)</span><br><span class="line">        (<span class="name">y</span> x)</span><br><span class="line">        (<span class="name">squarediff</span> (<span class="name"><span class="builtin-name">lambda</span></span> (a b) (<span class="name"><span class="builtin-name">-</span></span> (<span class="name"><span class="builtin-name">*</span></span> a a) (<span class="name"><span class="builtin-name">*</span></span> b b) ) ))</span><br><span class="line">        )</span><br><span class="line">        (<span class="name">squarediff</span> x y)</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><strong>Comment:</strong> There is only one declaration in the outer <code>let</code> is <code>(x 5)</code> and there are three declarations in the second <code>let</code> such as: <code>(x y)</code>, <code>(y x)</code> and <code>(squarediff (lambda (a b) (- (* a a) (* b b)) )</code>, the last declaration is declare a function named <em>squarediff</em>. Declaration <code>(y x)</code> is that y takes value from outer x whose value is 5, and expression <code>(squarediff x y)</code> is that pass inner x and the inner y as parameters to function <em>squarediff</em>. therefore, this function is <strong>4<em>4 - 5</em>5 = -9</strong>.</p>
+<h1 id="Examples-for-functions"><a href="#Examples-for-functions" class="headerlink" title="Examples for functions"></a>Examples for functions</h1><ul>
+<li>APPLY<ul>
+<li><code>(apply + &#39;(3 4))</code> =&gt; 7</li>
+<li>(apply (lambda (x) (- x 3)) ‘(4) )` =&gt;1</li>
+</ul>
+</li>
+<li><p>EVAL</p>
+<ul>
+<li><code>(eval (cdr &#39;(3 + 4 5)))</code><br><strong>Comment:</strong> run (cdr `(3 + 4 5)) get list ‘(+ 4 5) and use EVAL to evaluate ‘(+ 4 5) list that has been created as data  structure, we can get result <strong>9</strong>.</li>
+</ul>
+</li>
+<li><p>MAP</p>
+<ul>
+<li><p><code>(map + &#39;(2 3) &#39;(9 10))</code> =&gt; ‘(11 13)</p>
+</li>
+<li><p><code>(map car &#39;((2 3) (texas kansas)))</code> =&gt; (2 taxes)</p>
+</li>
+<li><p><code>(map cdr &#39;((2 3) (texas kansas)))</code> =&gt; ‘((3) (kansas))</p>
+</li>
+<li><code>(map cdr (cdr &#39;((2 3) (taxes kansas))))</code> =&gt; <code>&#39;((kansas))</code><br><strong>Comment:</strong> This statement will run the <code>(cdr &#39;((2 3) (texas kansas)))</code> first, we can get the list <code>&#39;((texas kansas))</code>, and MAP call the function CDR on the each element of the list <code>&#39;((texas kansas))</code>, so we get the lsit <code>&#39;((kansas))</code>.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h1><p>There must be a quote in front of the list when call the function <strong>MAP</strong> and <strong>EVAL</strong>, otherwise there will be error.</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/27/Scheme-Basic/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
